@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.m.openthedoorapp.activities.ProfileActivity">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/profile_swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/profile_appBar_layout_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/profile_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@android:color/transparent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/profile"
+                        android:textColor="@android:color/white"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/profile_back_txtV_id"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="left|center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:background="@drawable/ic_arrow_back_black_24dp"
+                        android:scaleType="fitXY" />
+
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="@dimen/margin_left"
+                    android:background="@color/white"
+                    android:padding="30dp">
+
+                    <TextView
+                        android:id="@+id/profile_userName_txtV"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:maxLines="1"
+                        android:text="@string/name"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/profile_userPhone_txtV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/phone"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="@id/profile_userName_txtV"
+                        app:layout_constraintStart_toStartOf="@id/profile_userName_txtV"
+                        app:layout_constraintTop_toBottomOf="@id/profile_userName_txtV" />
+
+                    <TextView
+                        android:id="@+id/profile_userEmail_txtV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/email"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="@id/profile_userName_txtV"
+                        app:layout_constraintStart_toStartOf="@id/profile_userName_txtV"
+                        app:layout_constraintTop_toBottomOf="@id/profile_userPhone_txtV" />
+
+                    <Button
+                        android:id="@+id/edit_profile_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_left"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="@dimen/margin_left"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:text="@string/edit_profile_date"
+                        android:textAllCaps="false"
+                        app:layout_constraintEnd_toEndOf="@id/profile_userName_txtV"
+                        app:layout_constraintStart_toStartOf="@id/profile_userName_txtV"
+                        app:layout_constraintTop_toBottomOf="@id/profile_userEmail_txtV" />
+
+                    <Button
+                        android:id="@+id/change_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_left"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="@dimen/margin_left"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:text="@string/change_password"
+                        android:textAllCaps="false"
+                        app:layout_constraintEnd_toEndOf="@id/profile_userName_txtV"
+                        app:layout_constraintStart_toStartOf="@id/profile_userName_txtV"
+                        app:layout_constraintTop_toBottomOf="@+id/edit_profile_date" />
+
+                    <Button
+                        android:id="@+id/myWallet_btn_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_left"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="@dimen/margin_left"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:text="@string/my_wallet"
+                        android:textAllCaps="false"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="@id/profile_userName_txtV"
+                        app:layout_constraintStart_toStartOf="@id/profile_userName_txtV"
+                        app:layout_constraintTop_toBottomOf="@+id/change_password" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_imageV_id"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/review_user_pic_withframe" />
+            </FrameLayout>
+        </FrameLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</FrameLayout>

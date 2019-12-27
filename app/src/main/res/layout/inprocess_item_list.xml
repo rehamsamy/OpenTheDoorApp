@@ -1,0 +1,100 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cons"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/border"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/inProcess_userImageV_id"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/review_user_pic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/inProcess_userName_txtV_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="user name"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/inProcess_userImageV_id"
+        app:layout_constraintEnd_toStartOf="@id/inprogresItem_ratingBar_id"
+        app:layout_constraintStart_toEndOf="@id/inProcess_userImageV_id"
+        app:layout_constraintTop_toTopOf="@id/inProcess_userImageV_id" />
+
+    <TextView
+        android:id="@+id/inProcess_serviceType_txtV_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/service_type_text"
+        app:layout_constraintStart_toStartOf="@id/inProcess_userImageV_id"
+        app:layout_constraintTop_toBottomOf="@id/inProcess_userImageV_id" />
+
+
+    <TextView
+        android:id="@+id/inProcess_price_val_txtV_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="10"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/inProcess_userImageV_id"
+        app:layout_constraintTop_toBottomOf="@id/inProcess_serviceType_txtV_id" />
+
+    <TextView
+        android:id="@+id/inProcess_price_txtV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/hour_price"
+        app:layout_constraintStart_toEndOf="@id/inProcess_price_val_txtV_id"
+        app:layout_constraintTop_toTopOf="@id/inProcess_price_val_txtV_id" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/inProcess_userImageV_id"
+        app:layout_constraintTop_toBottomOf="@id/inProcess_price_val_txtV_id">
+
+        <Button
+            android:id="@+id/inProcess_endService_btn_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="End Service" />
+
+        <ImageView
+            android:id="@+id/inProcess_cancelService_btn_id"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/cancel_service" />
+    </LinearLayout>
+
+    <RatingBar
+        android:id="@+id/inprogresItem_ratingBar_id"
+        style="@style/Base.Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rating="4"
+        app:layout_constraintBottom_toBottomOf="@id/inProcess_userImageV_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/inProcess_userImageV_id" />
+</androidx.constraintlayout.widget.ConstraintLayout>

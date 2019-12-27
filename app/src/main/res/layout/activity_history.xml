@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.m.openthedoorapp.activities.HistoryActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/history_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/history_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/history"
+                android:textColor="@android:color/white"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/history_back_txtV_id"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_arrow_back_black_24dp"
+                android:scaleType="fitXY" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/history_app_bar"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabMode="scrollable"
+        app:tabRippleColor="#567"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextColor="@color/black"
+        tools:ignore="NotSibling">
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/current_tab_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/current" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/inProcess_tab_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/inProgress" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/scheduled_tab_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/scheduled" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/canceled_tab_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/canceled" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/completed_tab_id"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/completed" />
+    </com.google.android.material.tabs.TabLayout>
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tab_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

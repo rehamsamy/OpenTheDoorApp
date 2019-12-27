@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <color name="colorPrimary">#baa805</color>-->
+    <color name="colorPrimary">#C89C17</color>
+<!--    <color name="colorPrimaryDark">#a39308</color>-->
+    <color name="colorPrimaryDark">#C89C17</color>
+    <color name="colorAccent">#baa805</color>
+    <color name="black">#020202</color>
+    <color name="white">#ffffff</color>
+
+    <color name="refresh_progress_1">#FF0266</color>
+    <color name="refresh_progress_2">#0336ff</color>
+    <color name="refresh_progress_3">#FFDE03</color>
+    <color name="cart_bgRow">#FA315B</color>
+</resources>

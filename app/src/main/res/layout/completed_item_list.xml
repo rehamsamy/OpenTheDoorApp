@@ -1,0 +1,113 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cons"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/border"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/completedService_user_imageV_id"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/review_user_pic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/completed_userName_txtV_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:maxLines="1"
+        android:text="user name"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/completedService_user_imageV_id"
+        app:layout_constraintEnd_toStartOf="@id/completedItem_ratingBar_id"
+        app:layout_constraintStart_toEndOf="@id/completedService_user_imageV_id"
+        app:layout_constraintTop_toTopOf="@id/completedService_user_imageV_id" />
+
+    <TextView
+        android:id="@+id/completed_serviceType_txtV_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/service_type"
+        app:layout_constraintStart_toStartOf="@id/completedService_user_imageV_id"
+        app:layout_constraintTop_toBottomOf="@id/completedService_user_imageV_id" />
+
+    <TextView
+        android:id="@+id/completedService_hourPrice_val_txtV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="10"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/completedService_user_imageV_id"
+        app:layout_constraintTop_toBottomOf="@id/completed_serviceType_txtV_id" />
+
+    <TextView
+        android:id="@+id/hourPrice_txtV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/hour_price"
+        app:layout_constraintStart_toEndOf="@id/completedService_hourPrice_val_txtV"
+        app:layout_constraintTop_toTopOf="@id/completedService_hourPrice_val_txtV" />
+
+    <TextView
+        android:id="@+id/completed_timeToArrive_val_txtV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="10"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/completedService_user_imageV_id"
+        app:layout_constraintTop_toBottomOf="@id/completedService_hourPrice_val_txtV" />
+
+    <TextView
+        android:id="@+id/timeToArrive_txtV_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:text="@string/time_to_arrive"
+        app:layout_constraintStart_toEndOf="@id/completed_timeToArrive_val_txtV"
+        app:layout_constraintTop_toTopOf="@id/completed_timeToArrive_val_txtV" />
+
+    <RatingBar
+        android:id="@+id/completedItem_ratingBar_id"
+        style="@style/Base.Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rating="4"
+        app:layout_constraintBottom_toBottomOf="@id/completedService_user_imageV_id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/completedService_user_imageV_id" />
+
+    <Button
+        android:id="@+id/completed_cancelService_btn_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/reorder_service"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/completed_timeToArrive_val_txtV" />
+
+    <ImageView
+        android:id="@+id/completed_makeCall_imageV_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:src="@drawable/make_call"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/completedService_hourPrice_val_txtV" />
+</androidx.constraintlayout.widget.ConstraintLayout>

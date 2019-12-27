@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/payment_shape"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/payment_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/visa_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/bank_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/bank_name_text"
+            android:textColor="@color/colorAccent"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/payment_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/card_number_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:text="@string/card_number_text"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            app:layout_constraintStart_toStartOf="@id/bank_name"
+            app:layout_constraintTop_toBottomOf="@id/bank_name" />
+
+        <TextView
+            android:id="@+id/cardholder_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:paddingEnd="8dp"
+            android:text="@string/cardholder_name"
+            android:textColor="@color/colorPrimary"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@id/bank_name"
+            app:layout_constraintTop_toBottomOf="@id/card_number_text" />
+
+        <TextView
+            android:id="@+id/cardholder_name_txtV_val"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="mahmoud Abdelamgeed"
+            android:textColor="@color/colorAccent"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@id/cardholder_name"
+            app:layout_constraintStart_toStartOf="@id/cardholder_name"
+            app:layout_constraintTop_toBottomOf="@id/cardholder_name" />
+
+        <TextView
+            android:id="@+id/expireDate_txtV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="5dp"
+            android:text="@string/expire_date"
+            android:textColor="@color/colorPrimary"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@id/cvv_txtV"
+            app:layout_constraintTop_toTopOf="@id/cardholder_name" />
+
+        <TextView
+            android:id="@+id/expireDate_txtV_val"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="12/2020"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/expireDate_txtV"
+            app:layout_constraintStart_toStartOf="@id/expireDate_txtV"
+            app:layout_constraintTop_toBottomOf="@id/expireDate_txtV"
+            app:layout_constraintTop_toTopOf="@id/cardholder_name_txtV_val" />
+
+        <TextView
+            android:id="@+id/cvv_txtV"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:paddingEnd="5dp"
+            android:text="@string/cvv"
+            android:textColor="@color/colorPrimary"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/cardholder_name" />
+
+        <TextView
+            android:id="@+id/cvv_txtV_val"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="@string/cvv_text"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/expireDate_txtV_val"
+            app:layout_constraintStart_toStartOf="@id/cvv_txtV"
+            app:layout_constraintTop_toTopOf="@id/cardholder_name_txtV_val" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/edit_payment_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:elevation="8dp"
+        android:src="@drawable/edit_payment_method" />
+
+</FrameLayout>

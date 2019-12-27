@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.m.openthedoorapp.activities.EditProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/editProfile_appBar_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/editProfile_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/edit_profile_date"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/editProfile_back_txtV_id"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/ic_arrow_back_black_24dp"
+                android:scaleType="fitXY" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true"
+        android:scrollbars="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginTop="35dp"
+                android:layout_marginRight="@dimen/margin_right"
+                android:background="@android:color/white"
+                android:padding="30dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edit_userName_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_right"
+                    android:hint="@string/name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:id="@+id/edit_userName_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/signup_username"
+                        android:drawablePadding="10dp"
+                        android:inputType="text"
+                        android:textColor="@android:color/black" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edit_userEmail_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:hint="@string/email"
+                    app:layout_constraintEnd_toEndOf="@+id/edit_userName_layout"
+                    app:layout_constraintLeft_toRightOf="@id/edit_userName_layout"
+                    app:layout_constraintTop_toBottomOf="@id/edit_userName_layout">
+
+                    <EditText
+                        android:id="@+id/edit_userEmail_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/signup_email"
+                        android:drawablePadding="10dp"
+                        android:textSize="15sp"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@android:color/black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edit_userPhone_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:hint="@string/phone"
+                    app:layout_constraintRight_toRightOf="@id/edit_userName_layout"
+                    app:layout_constraintLeft_toRightOf="@id/edit_phoneCode_ed_id"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_userEmail_layout">
+
+                    <EditText
+                        android:id="@+id/edit_userPhone_ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/signup_email"
+                        android:drawablePadding="10dp"
+                        android:inputType="phone"
+                        android:textColor="@android:color/black" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_phoneCode_ed_id"
+                    android:text="966"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="15dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/edit_userPhone_layout"/>
+
+                <Button
+                    android:id="@+id/save_editing_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_top"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:text="@string/save"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/edit_userName_layout"
+                    app:layout_constraintStart_toStartOf="@id/edit_userName_layout"
+                    app:layout_constraintTop_toBottomOf="@id/edit_userPhone_layout" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_user_imageV"
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_gravity="center_horizontal|fill_vertical"
+                android:src="@drawable/sidemenu_user_pic_withframe" />
+
+            <ImageView
+                android:id="@+id/profile_add_imageV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|fill_vertical"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/add_pic" />
+        </FrameLayout>
+    </ScrollView>
+</FrameLayout>

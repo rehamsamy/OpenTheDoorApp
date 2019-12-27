@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragmentTabs.MasterPaymentFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="15dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/master_bank_name_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="@string/bank_name_text"
+            app:boxBackgroundColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/master_bankName_ed_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/master_card_number_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:hint="@string/card_number_text"
+            app:boxBackgroundColor="@color/colorPrimary"
+            app:layout_constraintTop_toBottomOf="@+id/master_bank_name_layout">
+
+            <EditText
+                android:id="@+id/master_cardNumber_ed_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="16"
+                android:inputType="numberSigned"
+                android:textColor="@color/colorAccent"
+                android:textSize="17sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/master_expireDate_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/expire_date"
+            app:boxBackgroundColor="@color/colorPrimary"
+            app:layout_constraintEnd_toStartOf="@id/cvv_layout_id"
+            app:layout_constraintStart_toStartOf="@id/master_bank_name_layout"
+            app:layout_constraintTop_toBottomOf="@+id/master_card_number_layout">
+
+            <EditText
+                android:id="@+id/expireDate_ed_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:textColor="@color/colorAccent"
+                android:textColorLink="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cvv_layout_id"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/cvv"
+            app:boxBackgroundColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/master_expireDate_layout">
+
+            <EditText
+                android:id="@+id/masterCard_cvv_ed_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberSigned"
+                android:textColorLink="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/master_cardholder_name_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="@string/cardholder_name"
+            app:boxBackgroundColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/master_bank_name_layout"
+            app:layout_constraintTop_toBottomOf="@+id/master_expireDate_layout">
+
+            <EditText
+                android:id="@+id/master_cardHolderName_ed"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColorLink="@color/colorPrimary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/master_saveCard_checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/save_card_information"
+            android:textColor="@color/black"
+            android:textColorLink="@color/colorPrimary"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/master_bank_name_layout"
+            app:layout_constraintTop_toBottomOf="@id/master_cardholder_name_layout" />
+
+        <Button
+            android:id="@+id/save_masterPayment_information"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/margin_left"
+            android:layout_marginTop="15sp"
+            android:layout_marginRight="@dimen/margin_left"
+            android:background="@color/colorPrimary"
+            android:text="Save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/master_saveCard_checkbox" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

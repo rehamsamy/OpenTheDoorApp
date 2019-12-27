@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nearest"
+        android:title="Nearest" />
+
+    <item
+        android:id="@+id/low_price"
+        android:title="Low Price" />
+
+    <item
+        android:id="@+id/high_rate"
+        android:title="High Rate" />
+</menu>

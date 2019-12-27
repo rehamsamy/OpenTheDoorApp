@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/border"
+    android:id="@+id/provider_item_layout_id"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/provider_userName_txtV_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="A.Ali"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/provider_ratingBar_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RatingBar
+        android:id="@+id/provider_ratingBar_id"
+        style="@style/Base.Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:rating="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/price_val_txtV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="10"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="@id/provider_userName_txtV_id"
+        app:layout_constraintTop_toBottomOf="@id/provider_userName_txtV_id" />
+
+    <TextView
+        android:id="@+id/hour_price_txtV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/hour_price"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@id/price_val_txtV"
+        app:layout_constraintTop_toTopOf="@id/price_val_txtV" />
+
+    <TextView
+        android:id="@+id/provider_arriveTime_val_txtV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="10"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="@id/provider_userName_txtV_id"
+        app:layout_constraintTop_toBottomOf="@id/price_val_txtV" />
+
+    <TextView
+        android:id="@+id/arrivalTime_txtV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:text="@string/distance"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toEndOf="@id/provider_arriveTime_val_txtV"
+        app:layout_constraintTop_toTopOf="@id/provider_arriveTime_val_txtV" />
+
+
+    <ImageView
+        android:id="@+id/provider_makeCall_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:src="@drawable/make_call"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
